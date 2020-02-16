@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+一、多层感知机
+1.多层感知机的基本知识
+2.使用多层感知机图像分类的实现
+3.使用pytorch简洁实现
 
-You can use the [editor on GitHub](https://github.com/pengxiaoxiao/boyuStudy.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+与前面感知机的区别：多层感知机在单层神经网络的基础上引入了一到多个隐藏层（hidden layer）。隐藏层位于输入层与输出层之间。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1.多层感知机的基本知识：（multiply perceptron, MLP）
 
-### Markdown
+如图所示，输入和输出个数分别为4和3，中间的隐藏层中包含了5个隐藏单元（hidden unit）。由于输入层不涉及计算，图中的多层感知机的层数为2。隐藏层中的神经元和输入层中各个输入完全链接，输出层的神经元和隐藏层中的各个神经元也完全连接。因此，多层感知机中的隐藏层和输出层都是全连接层。
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/pengxiaoxiao/boyuStudy.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+In special, 给定一个小批量样本 ，其批量大小为n, 输入个数为d。假设多层感知机只有一个隐藏层，其中隐藏单元个数为h。记隐藏层的输出（也称隐藏层变量和隐藏变量）为H, 有  。因为隐藏层和输出层全为全连接层，可以设隐藏层的权重参数和偏差参数分别为  ，输出层的权重和偏差参数分别为
+  。
